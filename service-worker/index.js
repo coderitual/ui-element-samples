@@ -75,4 +75,4 @@ const options = {
   cert: fs.readFileSync('cert.pem')
 };
 // It says spdy, but it's actually HTTP/2 :)
-require('spdy').createServer(options, app).listen(8081);
+require('http').createServer(app).listen(8081);
